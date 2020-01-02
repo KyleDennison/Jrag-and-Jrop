@@ -5,15 +5,14 @@
       &lt;em&gt;most HTML tags may be used&lt;/em&gt;</change-notes>
   <idea-version since-build="193.5233" until-build="193.*"/>
   <id>org.example.ThesisPlugin</id>
-  <name>Plugin display name here</name>
-  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+  <name>EmerJ</name>
+  <vendor email="kyledennison090@gmail.com" url="https://kyledennison090.wixsite.com/website">KyleCorp</vendor>
   <description>
-    Enter short description for your plugin here.&lt;br&gt;
-    &lt;em&gt;most HTML tags may be used&lt;/em&gt;
+    This product makes an IDE more visually professional while also adding new functionality.
     </description>
   <depends>com.intellij.modules.platform</depends>
   <extensions defaultExtensionNs="com.intellij">
-    <toolWindow id="Sample Calendar" secondary="true" icon="/myToolWindow/plus.png" anchor="left" factoryClass="MyToolWindowFactory"/>
+    <toolWindow id="DandD" secondary="true" icon="/myToolWindow/plus.png" anchor="right" factoryClass="MyToolWindowFactory"/>
   </extensions>
   <actions/>
 </idea-plugin>
