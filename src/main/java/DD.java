@@ -12,7 +12,7 @@ public class DD {
     private JPanel dragArea;
     private JLabel ifLabel;
     private JButton btn;
-
+    private JButton btn2;
 
 
     public DD(ToolWindow toolWindow) {
@@ -26,6 +26,7 @@ public class DD {
         };
         ifLabel.addMouseListener(ml);
            btn.setTransferHandler(new TransferHandler("text"));
+        btn2.setTransferHandler(new TransferHandler("text"));
     }
 
     public JPanel getContent() {

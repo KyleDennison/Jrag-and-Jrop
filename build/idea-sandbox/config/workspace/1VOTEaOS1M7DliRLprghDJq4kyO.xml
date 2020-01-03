@@ -3,6 +3,8 @@
   <component name="ProjectView">
     <navigator proportions="" version="1" />
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -14,8 +16,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="TerminalArrangementManager">
@@ -33,9 +33,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="35" y="58" width="1400" height="781" extended-state="0" />
+    <frame x="35" y="62" width="1400" height="781" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.27926657" visible="true" weight="0.09499264" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.27926657" visible="true" weight="0.097201765" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.2569956" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.2569956" />
       <window_info anchor="bottom" id="Message" order="0" />
