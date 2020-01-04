@@ -1,6 +1,7 @@
 import com.intellij.openapi.wm.ToolWindow;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
@@ -19,10 +20,12 @@ public class DD {
     private JLabel ifLabel;
     private JLabel elseLabel;
     private JTextArea textArea1;
-
-
+    private JScrollPane sp;
+    int numColumns = 1;
 
     public DD(ToolWindow toolWindow) {
+
+        dropArea.setLayout(new GridLayout(numColumns, 0, 0, 5));
         TransferHandler dnd = new TransferHandler(){
             @Override
             public boolean canImport(TransferSupport support) {
@@ -40,7 +43,6 @@ public class DD {
                 if (!canImport(support)) {
                     return false;
                 }
-
                 Transferable tansferable = support.getTransferable();
                 String line;
                 try {
@@ -51,7 +53,14 @@ public class DD {
                 }
                 JTextArea.DropLocation dl = (JTextArea.DropLocation) support.getDropLocation();
                 JTextArea a = (JTextArea) support.getComponent();
+                a.setColumns(2);
                 a.setText(line);
+                Color yellow = new Color(255, 255, 237);
+                a.setBackground(yellow);
+                JTextArea newArea = new JTextArea();
+                numColumns++;
+                dropArea.setLayout(new GridLayout(numColumns, 0, 0, 5));
+                dropArea.add(newArea);
                 //textArea1.setText(line);
                 return true;
             }
@@ -94,6 +103,8 @@ public class DD {
     public JPanel getContent() {
         return panel1;
     }
+
+
 }
 
 /*
