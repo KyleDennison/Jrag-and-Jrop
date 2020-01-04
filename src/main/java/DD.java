@@ -24,7 +24,6 @@ public class DD {
     int numColumns = 1;
 
     public DD(ToolWindow toolWindow) {
-
         dropArea.setLayout(new GridLayout(numColumns, 0, 0, 5));
         TransferHandler dnd = new TransferHandler(){
             @Override
