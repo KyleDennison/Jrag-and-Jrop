@@ -6,10 +6,9 @@ import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.awt.dnd.*;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import java.awt.event.*;
 import java.io.IOException;
+import java.util.ArrayList;
 
 
 public class DD {
@@ -21,9 +20,39 @@ public class DD {
     private JLabel elseLabel;
     private JTextArea textArea1;
     private JScrollPane sp;
+    private JComboBox sectionSelector;
+    private JPanel labelArea;
     int numColumns = 1;
+    private JLabel arrayLabel;
+    private  JLabel listLabel;
 
     public DD(ToolWindow toolWindow) {
+        //Setting up labels
+        arrayLabel = new JLabel("Array");
+        listLabel = new JLabel("List");
+        ArrayList<JLabel> dsList = new ArrayList<>();
+        dsList.add(arrayLabel);
+        dsList.add(listLabel);
+
+        //set up sectionSelector drop down box
+        ItemListener i = new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                System.out.println("Change");
+
+                switch((String)sectionSelector.getSelectedItem()){
+                    case "Data Structures":
+                        System.out.println("DS selected");
+                        labelArea.removeAll();
+                        labelArea.setLayout(new GridLayout(2, 0, 0, 5));
+                        labelArea.add( arrayLabel);
+                        labelArea.add(listLabel);
+                }
+            }
+        };
+        sectionSelector.addItemListener(i);
+
+        //Set up DropArea's textArea for dnd release behaviour
         dropArea.setLayout(new GridLayout(numColumns, 0, 0, 5));
         TransferHandler dnd = new TransferHandler(){
             @Override
@@ -68,33 +97,11 @@ public class DD {
         textArea1.setDragEnabled(true);
         textArea1.setTransferHandler(dnd);
 
+
+        //Set up label to drag into text area
         MyDragGestureListener dlistener = new MyDragGestureListener();
         DragSource ds1 = new DragSource();
         ds1.createDefaultDragGestureRecognizer(ifLabel, DnDConstants.ACTION_COPY, dlistener);
-
-        //ifLabel.setTransferHandler(new TransferHandler("text"));
-        elseLabel.setTransferHandler(new TransferHandler("text"));
-
-        MouseListener ml = new MouseAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                //System.out.println("test2");
-                JComponent c = (JComponent)e.getSource();
-                TransferHandler th = c.getTransferHandler();
-                th.exportAsDrag(c, e, TransferHandler.COPY);
-            }
-        };
-
-
-
-
-        //ifLabel.addMouseListener(ml);
-        elseLabel.addMouseListener(ml);
-        //textArea1.addMouseListener(ml2);
-        //DropTarget dt = new DropTarget(textArea1,d);
-
-
-
     }
 
 
@@ -115,3 +122,20 @@ public class DD {
             }
         };
         */
+
+/*
+        MouseListener ml = new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                //System.out.println("test2");
+                JComponent c = (JComponent)e.getSource();
+                TransferHandler th = c.getTransferHandler();
+                th.exportAsDrag(c, e, TransferHandler.COPY);
+            }
+        };
+        */
+
+//ifLabel.addMouseListener(ml);
+//elseLabel.addMouseListener(ml);
+//textArea1.addMouseListener(ml2);
+//DropTarget dt = new DropTarget(textArea1,d);
