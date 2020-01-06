@@ -16,13 +16,13 @@
         </entry>
         <entry key="$USER_HOME$/IdeaProjects/TEST1">
           <value>
-            <RecentProjectMetaInfo projectWorkspaceId="1VOTEaOS1M7DliRLprghDJq4kyO">
+            <RecentProjectMetaInfo opened="true" projectWorkspaceId="1VOTEaOS1M7DliRLprghDJq4kyO">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
               <option name="build" value="IC-193.5233.102" />
-              <option name="buildTimestamp" value="1574898473458" />
-              <frame x="35" y="62" width="1400" height="781" />
+              <option name="buildTimestamp" value="1574898461964" />
+              <frame x="40" y="63" width="1400" height="781" />
               <option name="productionCode" value="IC" />
-              <option name="projectOpenTimestamp" value="1578325736817" />
+              <option name="projectOpenTimestamp" value="1578335323934" />
             </RecentProjectMetaInfo>
           </value>
         </entry>

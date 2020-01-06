@@ -4,11 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
-import java.awt.datatransfer.UnsupportedFlavorException;
 import java.awt.dnd.*;
 import java.awt.event.*;
-import java.io.IOException;
-import java.util.ArrayList;
 
 
 public class DD {
@@ -17,37 +14,131 @@ public class DD {
     private JPanel dragArea;
 
     private JLabel ifLabel;
-    private JLabel elseLabel;
     private JTextArea textArea1;
     private JScrollPane sp;
     private JComboBox sectionSelector;
-    private JPanel labelArea;
+    private JPanel LabelArea;
+    private JScrollPane sp2;
     int numColumns = 1;
     private JLabel arrayLabel;
     private  JLabel listLabel;
+    private JLabel intLabel;
+    private  JLabel doubleLabel;
+    private JLabel booleanLabel;
+    private  JLabel charLabel;
+    private JLabel stringLabel;
+    private JLabel plusLabel;
+    private  JLabel minusLabel;
+    private JLabel multiplyLabel;
+    private  JLabel divideLabel;
+    private JLabel percentLabel;
+    private JLabel andLabel;
+    private  JLabel orLabel;
+    private JLabel notLabel;
+    private  JLabel setLabel;
+    private JLabel equalLabel;
+    private JLabel notequalLabel;
+    private  JLabel lessthanLabel;
+    private JLabel greaterthanLabel;
+    private  JLabel lessequalLabel;
+    private JLabel greaterequalLabel;
+    private  JLabel elseLabel;
+    private JLabel forLabel;
+    private  JLabel whileLabel;
+    private JLabel printLabel;
 
     public DD(ToolWindow toolWindow) {
         //Setting up labels
         arrayLabel = new JLabel("Array");
         listLabel = new JLabel("List");
-        ArrayList<JLabel> dsList = new ArrayList<>();
-        dsList.add(arrayLabel);
-        dsList.add(listLabel);
+        intLabel = new JLabel("int");
+        doubleLabel = new JLabel("double");
+        booleanLabel = new JLabel("boolean");
+        charLabel = new JLabel("char");
+        stringLabel = new JLabel("string");
+        plusLabel = new JLabel("+");
+        minusLabel= new JLabel("-");
+        multiplyLabel = new JLabel("*");
+        divideLabel = new JLabel("/");
+        percentLabel= new JLabel("%");
+        andLabel = new JLabel("&&");
+        orLabel = new JLabel("||");
+        notLabel = new JLabel("!");
+        setLabel = new JLabel("=");
+        equalLabel = new JLabel("==");
+        notequalLabel = new JLabel("!=");
+        lessthanLabel = new JLabel("<");
+        greaterthanLabel = new JLabel(">");
+        lessequalLabel = new JLabel("<=");
+        greaterequalLabel = new JLabel(">=");
+        elseLabel= new JLabel("else");
+        forLabel= new JLabel("for");
+        whileLabel= new JLabel("while");
+        printLabel= new JLabel("print");
 
         //set up sectionSelector drop down box
         ItemListener i = new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
-                System.out.println("Change");
+                if(e.getStateChange() == ItemEvent.SELECTED) {
+                    System.out.println("Change");
+                    switch((String)sectionSelector.getSelectedItem()){
+                        case "Data Structures":
+                            LabelArea.removeAll();
+                            LabelArea.setLayout(new GridLayout(2, 0, 0, 5));
+                            LabelArea.add( arrayLabel);
+                            LabelArea.add(listLabel);
+                            LabelArea.revalidate();
+                            LabelArea.repaint();
+                            break;
+                        case "Data Types":
+                            LabelArea.removeAll();
+                            LabelArea.setLayout(new GridLayout(5, 0, 0, 5));
+                            LabelArea.add(intLabel);
+                            LabelArea.add(doubleLabel);
+                            LabelArea.add(booleanLabel);
+                            LabelArea.add(charLabel);
+                            LabelArea.add(stringLabel);
+                            LabelArea.revalidate();
+                            LabelArea.repaint();
+                            break;
+                        case "Operators":
+                            System.out.println("Op");
+                            LabelArea.removeAll();
+                            LabelArea.setLayout(new GridLayout(15, 0, 0, 5));
+                            LabelArea.add(plusLabel);
+                            LabelArea.add(minusLabel);
+                            LabelArea.add(multiplyLabel);
+                            LabelArea.add(divideLabel);
+                            LabelArea.add(percentLabel);
+                            LabelArea.add(andLabel);
+                            LabelArea.add(orLabel);
+                            LabelArea.add(notLabel);
+                            LabelArea.add(setLabel);
+                            LabelArea.add(equalLabel);
+                            LabelArea.add(notequalLabel);
+                            LabelArea.add(lessthanLabel);
+                            LabelArea.add(greaterthanLabel);
+                            LabelArea.add(lessequalLabel);
+                            LabelArea.add(greaterequalLabel);
+                            LabelArea.revalidate();
+                            LabelArea.repaint();
+                            break;
+                        case "Methods":
+                            LabelArea.removeAll();
+                            LabelArea.setLayout(new GridLayout(5, 0, 0, 5));
+                            LabelArea.add(ifLabel);
+                            LabelArea.add(elseLabel );
+                            LabelArea.add( forLabel);
+                            LabelArea.add(whileLabel);
+                            LabelArea.add(printLabel);
+                            LabelArea.revalidate();
+                            LabelArea.repaint();
+                            break;
 
-                switch((String)sectionSelector.getSelectedItem()){
-                    case "Data Structures":
-                        System.out.println("DS selected");
-                        labelArea.removeAll();
-                        labelArea.setLayout(new GridLayout(2, 0, 0, 5));
-                        labelArea.add( arrayLabel);
-                        labelArea.add(listLabel);
+                    }
                 }
+
             }
         };
         sectionSelector.addItemListener(i);

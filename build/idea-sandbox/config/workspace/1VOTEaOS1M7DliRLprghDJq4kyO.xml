@@ -1,10 +1,9 @@
 <project version="4">
-  <component name="ProjectFrameBounds" x="35" y="62" width="1400" height="781" />
+  <component name="ProjectFrameBounds" x="40" y="63" width="1400" height="781" />
   <component name="ProjectView">
     <navigator proportions="" version="1" />
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -16,6 +15,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="TerminalArrangementManager">
@@ -33,9 +33,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="35" y="58" width="1400" height="781" extended-state="0" />
+    <frame x="40" y="58" width="1400" height="781" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.27926657" visible="true" weight="0.14285715" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.27926657" visible="true" weight="0.14801179" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.2569956" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.2569956" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -56,7 +56,7 @@
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="right" id="Ant" order="4" weight="0.3298969" />
       <window_info anchor="right" id="Sample Calendar" order="5" side_tool="true" weight="0.4992636" />
-      <window_info active="true" anchor="right" id="DandD" order="6" sideWeight="0.7207334" side_tool="true" visible="true" weight="0.83505154" />
+      <window_info active="true" anchor="right" id="DandD" order="6" sideWeight="0.7207334" side_tool="true" visible="true" weight="0.8291605" />
     </layout>
   </component>
   <component name="antWorkspaceConfiguration">
