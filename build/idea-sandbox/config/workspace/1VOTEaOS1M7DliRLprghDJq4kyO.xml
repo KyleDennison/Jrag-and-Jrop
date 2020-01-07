@@ -1,9 +1,28 @@
 <project version="4">
-  <component name="ProjectFrameBounds" x="40" y="63" width="1400" height="781" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/test.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" x="14" y="60" width="1400" height="781" />
   <component name="ProjectView">
     <navigator proportions="" version="1" />
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -11,19 +30,25 @@
               <item name="TEST1" type="b2602c69:ProjectViewProjectNode" />
               <item name="TEST1" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="TEST1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TEST1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="TerminalArrangementManager">
     <option name="myTabStates">
-      <TerminalTabState tabName="Local" commandHistoryFileName="history-" />
+      <TerminalTabState tabName="Local" commandHistoryFileName="history-2" />
     </option>
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -33,11 +58,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="40" y="58" width="1400" height="781" extended-state="0" />
+    <frame x="14" y="58" width="1400" height="781" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.27926657" visible="true" weight="0.14801179" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.2569956" />
-      <window_info id="Favorites" order="2" side_tool="true" weight="0.2569956" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.35791758" visible="true" weight="0.1730486" />
+      <window_info id="Structure" order="1" sideWeight="0.64208245" side_tool="true" weight="0.16200295" />
+      <window_info id="Favorites" order="2" sideWeight="0.64208245" side_tool="true" weight="0.16200295" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -47,7 +73,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32994187" />
       <window_info anchor="bottom" id="Services" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32994187" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32994187" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -56,11 +82,20 @@
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="right" id="Ant" order="4" weight="0.3298969" />
       <window_info anchor="right" id="Sample Calendar" order="5" side_tool="true" weight="0.4992636" />
-      <window_info active="true" anchor="right" id="DandD" order="6" sideWeight="0.7207334" side_tool="true" visible="true" weight="0.8291605" />
+      <window_info active="true" anchor="right" id="DandD" order="6" sideWeight="0.7207334" side_tool="true" visible="true" weight="0.29749632" />
     </layout>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
