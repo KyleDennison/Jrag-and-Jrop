@@ -1,6 +1,7 @@
 <idea-plugin>
     <id>org.example.ThesisPlugin</id>
     <name>EmerJ</name>
+    <version>1.0</version>
     <vendor email="kyledennison090@gmail.com" url="https://kyledennison090.wixsite.com/website">KyleCorp</vendor>
 
     <description><![CDATA[
