@@ -4,8 +4,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="162">
+              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -19,7 +22,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" x="20" y="117" width="1400" height="781" />
+  <component name="ProjectFrameBounds" x="82" y="312" width="1400" height="814" />
   <component name="ProjectView">
     <navigator proportions="" version="1" />
     <panes>
@@ -58,9 +61,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="20" y="117" width="1400" height="781" extended-state="0" />
+    <frame x="40" y="25" width="1400" height="814" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.35791758" visible="true" weight="0.19661267" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.35791758" visible="true" weight="0.26917404" />
       <window_info id="Structure" order="1" sideWeight="0.64208245" side_tool="true" weight="0.16200295" />
       <window_info id="Favorites" order="2" sideWeight="0.64208245" side_tool="true" weight="0.16200295" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -82,7 +86,8 @@
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="right" id="Ant" order="4" weight="0.3298969" />
       <window_info anchor="right" id="Sample Calendar" order="5" side_tool="true" weight="0.4992636" />
-      <window_info active="true" anchor="right" id="DandD" order="6" sideWeight="0.7207334" side_tool="true" visible="true" weight="0.18188512" />
+      <window_info anchor="right" id="DandD" order="6" sideWeight="0.7207334" side_tool="true" weight="0.18159609" />
+      <window_info active="true" anchor="right" id="DnD" order="7" side_tool="true" visible="true" weight="0.32890856" />
     </layout>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -92,8 +97,11 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="162">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

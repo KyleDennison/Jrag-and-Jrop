@@ -8,10 +8,11 @@
   <vendor email="kyledennison090@gmail.com" url="https://kyledennison090.wixsite.com/website">KyleCorp</vendor>
   <description>
     This product makes an IDE more visually professional while also adding new functionality.
+    "Drag" Icon comes from Timothy Miller at iconfinder.com.
     </description>
   <depends>com.intellij.modules.platform</depends>
   <extensions defaultExtensionNs="com.intellij">
-    <toolWindow id="DandD" secondary="true" icon="/myToolWindow/plus.png" anchor="right" factoryClass="MyToolWindowFactory"/>
+    <toolWindow id="DnD" secondary="true" icon="/myToolWindow/move.png" anchor="right" factoryClass="MyToolWindowFactory"/>
   </extensions>
   <actions/>
 </idea-plugin>

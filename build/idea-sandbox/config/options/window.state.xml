@@ -6,7 +6,7 @@
     <size key="GridCell.Tab.0.bottom.0.0.2880.1800@192dpi" width="2716" height="398" />
   </component>
   <component name="WindowManager">
-    <frame x="14" y="60" width="1400" height="781" />
+    <frame x="82" y="312" width="1400" height="814" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -31,12 +31,13 @@
       <screen x="0" y="23" width="1440" height="816" />
     </state>
     <state x="323" y="192" key="IDE.errors.dialog/0.23.1440.816" timestamp="1578322924270" />
-    <state x="719" y="382" key="WELCOME_SCREEN" timestamp="1578504708103">
+    <state x="719" y="382" key="WELCOME_SCREEN" timestamp="1578930049234">
       <screen x="0" y="23" width="1440" height="816" />
     </state>
-    <state x="719" y="382" key="WELCOME_SCREEN/0.23.1440.816" timestamp="1578504708103" />
-    <state x="719" y="384" key="WELCOME_SCREEN/0.23.1440.821" timestamp="1578060330018" />
-    <state x="719" y="384" key="WELCOME_SCREEN/0.23.1440.822" timestamp="1577123695250" />
+    <state x="719" y="382" key="WELCOME_SCREEN/0.23.1440.814" timestamp="1578928904939" />
+    <state x="719" y="382" key="WELCOME_SCREEN/0.23.1440.816" timestamp="1578930049234" />
+    <state x="719" y="384" key="WELCOME_SCREEN/0.23.1440.821" timestamp="1578683086391" />
+    <state x="719" y="384" key="WELCOME_SCREEN/0.23.1440.822" timestamp="1578670992791" />
     <state x="114" y="23" key="new project wizard" timestamp="1577472871029">
       <screen x="0" y="23" width="1440" height="816" />
     </state>

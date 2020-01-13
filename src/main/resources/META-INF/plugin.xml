@@ -6,6 +6,7 @@
 
     <description><![CDATA[
     This product makes an IDE more visually professional while also adding new functionality.
+    "Drag" Icon comes from Timothy Miller at iconfinder.com.
     ]]></description>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
@@ -13,7 +14,7 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow id="DandD" secondary="true" icon="/myToolWindow/plus.png" anchor="right"
+        <toolWindow id="DnD" secondary="true" icon="/myToolWindow/move.png" anchor="right"
                     factoryClass="MyToolWindowFactory"/>
 
     </extensions>

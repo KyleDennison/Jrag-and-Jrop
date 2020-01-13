@@ -3,6 +3,7 @@
     <option name="fontFace" value=".SFNSText" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Darcula.SavedEditorTheme" value="_@user_Darcula" />
     <property name="Default.SavedEditorTheme" value="_@user_Default" />
     <property name="ExpandRunDashboardTypesPanel" value="false" />
     <property name="FileTemplates.SelectedTemplate" value="HTML File" />
