@@ -1,9 +1,13 @@
 import com.intellij.openapi.wm.ToolWindow;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.Border;
+import javax.swing.plaf.ButtonUI;
+import javax.swing.plaf.basic.BasicButtonUI;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.IOException;
 import java.util.ArrayList;
 
 
@@ -25,7 +29,6 @@ public class DnD {
     private  JTextArea whileArea;
     private  JTextArea printArea;
     private  JTextArea mainArea;
-
     private  JTextArea docDescArea;
     private  JTextArea docSecArea;
     private  JTextArea testMethodArea;
@@ -39,8 +42,37 @@ public class DnD {
     private  JTextArea instanceOfArea;
     private  JTextArea nullArea;
     private  JTextArea instanceSameArea;
+    private JButton b0;
+    private JButton b1;
+    private JButton b2;
+    private JButton b3;
+    private JButton b4;
+    private JButton b5;
+    private JButton b6;
+    private JButton b7;
+    private JButton b8;
+    private JButton b9;
+    private JButton b10;
+    private JButton b11;
+    private JButton b12;
+    private JButton b13;
+    private JButton b14;
+    private JButton b15;
+    private JButton b16;
+    private JButton b17;
+    private JButton b18;
+    private JButton b19;
+    private JButton b20;
+    private JButton b21;
+    private JButton b22;
+    private JButton b23;
+    private JButton b24;
+    private JButton b25;
 
 
+
+
+    int bCounter;
     int numClicks = 0;
 
 
@@ -51,9 +83,105 @@ public class DnD {
     private JTextArea a1;
 
     public DnD(ToolWindow toolWindow) {
-        JTextArea temp = new JTextArea("temp");
-        JTextArea temp2 = new JTextArea("temp");
-        JTextArea temp3 = new JTextArea("temp");
+        bCounter = 0;
+        ArrayList<JTextArea> favs = new ArrayList<>();
+        Color pink = new Color(240,128,190);
+        Color blue = new Color(173,216,230);
+        Color green = new Color(152, 251, 152);
+        Color yellow = new Color(255, 255, 237);
+
+        //set up star buttons
+        ArrayList<JButton> bList = new ArrayList<>();
+        Image emptyStar = null;
+        Image fullStar = null;
+        try {
+            emptyStar = ImageIO.read(getClass().getResource("myToolWindow/emptyStar.png"));
+            fullStar = ImageIO.read(getClass().getResource("myToolWindow/filledStar.png"));
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        ImageIcon emptyIcon = new ImageIcon(emptyStar);
+        ImageIcon fullIcon = new ImageIcon(fullStar);
+        b0=new JButton(emptyIcon);
+        bList.add(b0);
+        b1=new JButton(emptyIcon);
+        bList.add(b1);
+        b2=new JButton(emptyIcon);
+        bList.add(b2);
+        b3=new JButton(emptyIcon);
+        bList.add(b3);
+        b4=new JButton(emptyIcon);
+        bList.add(b4);
+        b5=new JButton(emptyIcon);
+        b5.setUI((ButtonUI) BasicButtonUI.createUI(b5));
+        bList.add(b5);
+        b6=new JButton(emptyIcon);
+        bList.add(b6);
+        b7=new JButton(emptyIcon);
+        bList.add(b7);
+        b8=new JButton(emptyIcon);
+        bList.add(b8);
+        b9=new JButton(emptyIcon);
+        bList.add(b9);
+        b10=new JButton(emptyIcon);
+        bList.add(b10);
+        b11=new JButton(emptyIcon);
+        bList.add(b11);
+        b12=new JButton(emptyIcon);
+        bList.add(b12);
+        b13=new JButton(emptyIcon);
+        bList.add(b13);
+        b14=new JButton(emptyIcon);
+        bList.add(b14);
+        b15=new JButton(emptyIcon);
+        bList.add(b15);
+        b16=new JButton(emptyIcon);
+        bList.add(b16);
+        b17=new JButton(emptyIcon);
+        bList.add(b17);
+        b18=new JButton(emptyIcon);
+        bList.add(b18);
+        b19=new JButton(emptyIcon);
+        bList.add(b19);
+        b20=new JButton(emptyIcon);
+        bList.add(b20);
+        b21=new JButton(emptyIcon);
+        bList.add(b21);
+        b22=new JButton(emptyIcon);
+        bList.add(b22);
+        b23=new JButton(emptyIcon);
+        bList.add(b23);
+        b24=new JButton(emptyIcon);
+        bList.add(b24);
+        b25=new JButton(emptyIcon);
+        bList.add(b25);
+        ActionListener a = new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                JComponent c = (JComponent)e.getSource();
+                if(((JButton) c).getIcon() == emptyIcon) {
+                    ((JButton) c).setIcon(fullIcon);
+                    JPanel panel = (JPanel) c.getParent();
+                    JTextArea a = (JTextArea) panel.getComponent(0);
+                    favs.add(a);
+                    bCounter++;
+                }
+                else{
+                    ((JButton) c).setIcon(emptyIcon);
+                    JPanel panel = (JPanel) c.getParent();
+                    JTextArea a = (JTextArea) panel.getComponent(0);
+                    favs.remove(a);
+                    bCounter--;
+                }
+            }
+        };
+        for(JButton button : bList){
+            button.addActionListener(a);
+            button.setUI((ButtonUI) BasicButtonUI.createUI(button));
+            Border border = BorderFactory.createLineBorder(Color.BLACK,1);
+            button.setBorder(border);
+        }
         //setting up Text areas
         arrayArea=new JTextArea("array");
         listArea=new JTextArea("list");
@@ -98,50 +226,215 @@ public class DnD {
                         case "Data Structures":
                             dragArea.removeAll();
                             dragArea.setLayout(new GridLayout(2, 0, 0, 5));
-                            dragArea.add( arrayArea);
-                            dragArea.add(listArea);
+                            JPanel t0 = new JPanel();
+                            JPanel t1 = new JPanel();
+
+                            b0.setBackground(pink);
+                            b1.setBackground(pink);
+                            t0.setLayout(new BorderLayout());
+                            t0.add(arrayArea, BorderLayout.CENTER);
+                            t0.add(b0, BorderLayout.EAST);
+                            dragArea.add(t0);
+                            t1.setLayout(new BorderLayout());
+                            t1.add(listArea, BorderLayout.CENTER);
+                            t1.add(b1, BorderLayout.EAST);
+                            dragArea.add(t1);
                             dragArea.revalidate();
                             dragArea.repaint();
                             break;
                         case "Data Types":
                             dragArea.removeAll();
                             dragArea.setLayout(new GridLayout(5, 0, 0, 5));
-                            dragArea.add(intArea);
-                            dragArea.add(doubleArea);
-                            dragArea.add(booleanArea);
-                            dragArea.add(charArea);
-                            dragArea.add(stringArea);
+
+                            JPanel t2 = new JPanel();
+                            JPanel t3 = new JPanel();
+                            JPanel t4 = new JPanel();
+                            JPanel t5 = new JPanel();
+                            JPanel t6 = new JPanel();
+
+                            b2.setBackground(blue);
+                            b3.setBackground(blue);
+                            b4.setBackground(blue);
+                            b5.setBackground(blue);
+                            b6.setBackground(blue);
+
+                            t2.setLayout(new BorderLayout());
+                            t2.add(intArea, BorderLayout.CENTER);
+                            t2.add(b2, BorderLayout.EAST);
+                            dragArea.add(t2);
+                            t3.setLayout(new BorderLayout());
+                            t3.add(doubleArea, BorderLayout.CENTER);
+                            t3.add(b3, BorderLayout.EAST);
+                            dragArea.add(t3);
+                            t4.setLayout(new BorderLayout());
+                            t4.add(booleanArea, BorderLayout.CENTER);
+                            t4.add(b4, BorderLayout.EAST);
+                            dragArea.add(t4);
+                            t5.setLayout(new BorderLayout());
+                            t5.add(charArea, BorderLayout.CENTER);
+                            t5.add(b5, BorderLayout.EAST);
+                            dragArea.add(t5);
+                            t6.setLayout(new BorderLayout());
+                            t6.add(stringArea, BorderLayout.CENTER);
+                            t6.add(b6, BorderLayout.EAST);
+                            dragArea.add(t6);
+
                             dragArea.revalidate();
                             dragArea.repaint();
                             break;
                         case "Testing":
                             dragArea.removeAll();
                             dragArea.setLayout(new GridLayout(13, 0, 0, 5));
-                            dragArea.add(docDescArea);
-                            dragArea.add(docSecArea);
-                            dragArea.add(testMethodArea);
-                            dragArea.add(assertArea);
-                            dragArea.add(isArea);
-                            dragArea.add(anyArea);
-                            dragArea.add(allOfArea);
-                            dragArea.add(anyOfArea);
-                            dragArea.add(notMatchArea);
-                            dragArea.add(equalToArea);
-                            dragArea.add(instanceOfArea);
-                            dragArea.add(nullArea);
-                            dragArea.add(instanceSameArea);
+
+                            JPanel t7 = new JPanel();
+                            JPanel t8 = new JPanel();
+                            JPanel t9 = new JPanel();
+                            JPanel t10 = new JPanel();
+                            JPanel t11 = new JPanel();
+                            JPanel t12 = new JPanel();
+                            JPanel t13 = new JPanel();
+                            JPanel t14 = new JPanel();
+                            JPanel t15 = new JPanel();
+                            JPanel t16 = new JPanel();
+                            JPanel t17 = new JPanel();
+                            JPanel t18 = new JPanel();
+                            JPanel t19 = new JPanel();
+
+                            b7.setBackground(green);
+                            b8.setBackground(green);
+                            b9.setBackground(green);
+                            b10.setBackground(green);
+                            b11.setBackground(green);
+                            b12.setBackground(green);
+                            b13.setBackground(green);
+                            b14.setBackground(green);
+                            b15.setBackground(green);
+                            b16.setBackground(green);
+                            b17.setBackground(green);
+                            b18.setBackground(green);
+                            b19.setBackground(green);
+
+                            t7.setLayout(new BorderLayout());
+                            t7.add(docDescArea, BorderLayout.CENTER);
+                            t7.add(b7, BorderLayout.EAST);
+                            dragArea.add(t7);
+
+                            t8.setLayout(new BorderLayout());
+                            t8.add(docSecArea, BorderLayout.CENTER);
+                            t8.add(b8, BorderLayout.EAST);
+                            dragArea.add(t8);
+
+                            t9.setLayout(new BorderLayout());
+                            t9.add(testMethodArea, BorderLayout.CENTER);
+                            t9.add(b9, BorderLayout.EAST);
+                            dragArea.add(t9);
+
+                            t10.setLayout(new BorderLayout());
+                            t10.add(assertArea, BorderLayout.CENTER);
+                            t10.add(b10, BorderLayout.EAST);
+                            dragArea.add(t10);
+
+                            t11.setLayout(new BorderLayout());
+                            t11.add(isArea, BorderLayout.CENTER);
+                            t11.add(b11, BorderLayout.EAST);
+                            dragArea.add(t11);
+
+                            t12.setLayout(new BorderLayout());
+                            t12.add(anyArea, BorderLayout.CENTER);
+                            t12.add(b12, BorderLayout.EAST);
+                            dragArea.add(t12);
+
+                            t13.setLayout(new BorderLayout());
+                            t13.add(allOfArea, BorderLayout.CENTER);
+                            t13.add(b13, BorderLayout.EAST);
+                            dragArea.add(t13);
+
+                            t14.setLayout(new BorderLayout());
+                            t14.add(anyOfArea, BorderLayout.CENTER);
+                            t14.add(b14, BorderLayout.EAST);
+                            dragArea.add(t14);
+
+                            t15.setLayout(new BorderLayout());
+                            t15.add(notMatchArea, BorderLayout.CENTER);
+                            t15.add(b15, BorderLayout.EAST);
+                            dragArea.add(t15);
+
+                            t16.setLayout(new BorderLayout());
+                            t16.add(equalToArea, BorderLayout.CENTER);
+                            t16.add(b16, BorderLayout.EAST);
+                            dragArea.add(t16);
+
+                            t17.setLayout(new BorderLayout());
+                            t17.add(instanceOfArea, BorderLayout.CENTER);
+                            t17.add(b17, BorderLayout.EAST);
+                            dragArea.add(t17);
+
+                            t18.setLayout(new BorderLayout());
+                            t18.add(nullArea, BorderLayout.CENTER);
+                            t18.add(b18, BorderLayout.EAST);
+                            dragArea.add(t18);
+
+                            t19.setLayout(new BorderLayout());
+                            t19.add(instanceSameArea, BorderLayout.CENTER);
+                            t19.add(b19, BorderLayout.EAST);
+                            dragArea.add(t19);
+
                             dragArea.revalidate();
                             dragArea.repaint();
                             break;
                         case "Methods":
                             dragArea.removeAll();
                             dragArea.setLayout(new GridLayout(6, 0, 0, 5));
-                            dragArea.add(mainArea);
-                            dragArea.add(ifArea);
-                            dragArea.add(elseArea);
-                            dragArea.add(whileArea);
-                            dragArea.add(forArea);
-                            dragArea.add(printArea);
+
+                            JPanel t20 = new JPanel();
+                            JPanel t21 = new JPanel();
+                            JPanel t22 = new JPanel();
+                            JPanel t23 = new JPanel();
+                            JPanel t24 = new JPanel();
+                            JPanel t25 = new JPanel();
+
+
+                            b20.setBackground(yellow);
+                            b21.setBackground(yellow);
+                            b22.setBackground(yellow);
+                            b23.setBackground(yellow);
+                            b24.setBackground(yellow);
+                            b25.setBackground(yellow);
+
+
+                            t20.setLayout(new BorderLayout());
+                            t20.add(mainArea, BorderLayout.CENTER);
+                            t20.add(b20, BorderLayout.EAST);
+                            dragArea.add(t20);
+                            t21.setLayout(new BorderLayout());
+                            t21.add(ifArea, BorderLayout.CENTER);
+                            t21.add(b21, BorderLayout.EAST);
+                            dragArea.add(t21);
+                            t22.setLayout(new BorderLayout());
+                            t22.add(elseArea, BorderLayout.CENTER);
+                            t22.add(b22, BorderLayout.EAST);
+                            dragArea.add(t22);
+                            t23.setLayout(new BorderLayout());
+                            t23.add(whileArea, BorderLayout.CENTER);
+                            t23.add(b23, BorderLayout.EAST);
+                            dragArea.add(t23);
+                            t24.setLayout(new BorderLayout());
+                            t24.add(forArea, BorderLayout.CENTER);
+                            t24.add(b24, BorderLayout.EAST);
+                            dragArea.add(t24);
+                            t25.setLayout(new BorderLayout());
+                            t25.add(printArea, BorderLayout.CENTER);
+                            t25.add(b25, BorderLayout.EAST);
+                            dragArea.add(t25);
+                            dragArea.revalidate();
+                            dragArea.repaint();
+                            break;
+                        case "Favourites":
+                            dragArea.removeAll();
+                            dragArea.setLayout(new GridLayout(favs.size(), 0, 0, 5));
+                            for(JTextArea j : favs){
+                                dragArea.add(j);
+                            }
                             dragArea.revalidate();
                             dragArea.repaint();
                             break;
@@ -216,7 +509,7 @@ public class DnD {
                 JComponent c = (JComponent)e.getSource();
                 ((JTextArea) c).setEditable(true);
                 String name = ((JTextArea) c).getText();
-                System.out.println(name);
+                //System.out.println(name);
                 if(numClicks < 2) {
                     if (name.equals("array")) {
                         ((JTextArea) c).setText("[] X = new [];");
@@ -257,7 +550,7 @@ public class DnD {
                 JComponent c = (JComponent)e.getSource();
                 ((JTextArea) c).setEditable(true);
                 String name = ((JTextArea) c).getText();
-                System.out.println(name);
+                //System.out.println(name);
                 if(numClicks < 2) {
                     if (name.equals("char")) {
                         ((JTextArea) c).setText("char X = '';");
@@ -307,7 +600,7 @@ public class DnD {
                 JComponent c = (JComponent)e.getSource();
                 ((JTextArea) c).setEditable(true);
                 String name = ((JTextArea) c).getText();
-                System.out.println("press " + name);
+                //System.out.println("press " + name);
                 if(numClicks < 2) {
                     if (name.equals("Doc Description")) {
                         ((JTextArea) c).setText("/**" + "\n" + "* My method does X" + "\n" + "* @param" + "\n" + "* @return" + "\n" + "*/");
@@ -335,7 +628,7 @@ public class DnD {
                 JComponent c = (JComponent)e.getSource();
                 ((JTextArea) c).setEditable(true);
                 String name = ((JTextArea) c).getText();
-                System.out.println("left " + name);
+                //System.out.println("left " + name);
                 if(name.equals("/**" + "\n" + "* My method does X" + "\n" + "* @param" + "\n" + "* @return" + "\n" + "*/") || name.equals("Doc Description")){
                     ((JTextArea) c).setText("Doc Description");
                 }
@@ -368,23 +661,19 @@ public class DnD {
             j.setEditable(false);
 
             if(counter <=5){
-                Color yellow = new Color(255, 255, 237);
                 j.setBackground(yellow);
                 j.addMouseListener(methodListener);
             }
             if(counter>5 && counter <= 18){
-                Color green = new Color(152, 251, 152);
                 j.setBackground(green);
                 j.addMouseListener(testingListener);
             }
             if(counter>18 && counter <= 23){
-                Color blue = new Color(173,216,230);
                 j.setBackground(blue);
                 j.addMouseListener(typeListener);
             }
             if(counter>23 && counter <= 25){
-                Color red = new Color(255,204,203);
-                j.setBackground(red);
+                j.setBackground(pink);
                 j.addMouseListener(structureListener);
             }
             j.setFont(new Font("Times New Roman", Font.BOLD,16));

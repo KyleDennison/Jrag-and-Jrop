@@ -8,7 +8,8 @@
   <vendor email="kyledennison090@gmail.com" url="https://kyledennison090.wixsite.com/website">KyleCorp</vendor>
   <description>
     This product makes an IDE more visually professional while also adding new functionality.
-    "Drag" Icon comes from Timothy Miller at iconfinder.com.
+    "Drag" Icon comes from Timothy Miller at iconfinder.com
+    Star Icon comes from "Star icon" by Icons8 at icons8.com
     </description>
   <depends>com.intellij.modules.platform</depends>
   <extensions defaultExtensionNs="com.intellij">
