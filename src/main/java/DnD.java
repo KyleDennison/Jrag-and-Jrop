@@ -98,14 +98,19 @@ public class DnD {
         ArrayList<JButton> bList = new ArrayList<>();
         Image emptyStar = null;
         Image fullStar = null;
+        Image add = null;
         try {
             emptyStar = ImageIO.read(getClass().getResource("myToolWindow/emptyStar.png"));
             fullStar = ImageIO.read(getClass().getResource("myToolWindow/filledStar.png"));
+            add = ImageIO.read(getClass().getResource("myToolWindow/plus.png"));
         } catch (IOException ex) {
             ex.printStackTrace();
         }
         ImageIcon emptyIcon = new ImageIcon(emptyStar);
         ImageIcon fullIcon = new ImageIcon(fullStar);
+        ImageIcon plusIcon = new ImageIcon(add);
+
+        addBtn.setIcon(plusIcon);
         ActionListener favouriteListener = new ActionListener()
         {
             public void actionPerformed(ActionEvent e)
@@ -160,10 +165,11 @@ public class DnD {
         stringDrag.setLabelName("String");
         stringDrag.setLabelContent("String X = \"\";");
         dtList.add(intDrag);
-        dtList.add(doubleDrag);
-        dtList.add(booleanDrag);
-        dtList.add(charDrag);
         dtList.add(stringDrag);
+        dtList.add(booleanDrag);
+        dtList.add(doubleDrag);
+        dtList.add(charDrag);
+
 
         ArrayList<DragLabel> testingList = new ArrayList<>();
         DragLabel descDrag = new DragLabel();
@@ -238,12 +244,20 @@ public class DnD {
         DragLabel mainDrag = new DragLabel();
         mainDrag.setLabelName("main()");
         mainDrag.setLabelContent("public static void main(String[] args){" + "\n" + "\n" +  "}");
-        methodList.add(mainDrag);
-        methodList.add(printDrag);
-        methodList.add(whileDrag);
-        methodList.add(forDrag);
-        methodList.add(elseDrag);
+        DragLabel getDrag = new DragLabel();
+        getDrag.setLabelName("get()");
+        getDrag.setLabelContent("public datatype getX(){" + "\n"+  "return X;" + "\n" +  "}" );
+        DragLabel setDrag = new DragLabel();
+        setDrag.setLabelName("set()");
+        setDrag.setLabelContent("public void setX(datatype pX){" +  "\n" + "X = pX; " + "\n" +  "}" );
         methodList.add(ifDrag);
+        methodList.add(elseDrag);
+        methodList.add(printDrag);
+        methodList.add(forDrag);
+        methodList.add(whileDrag);
+        methodList.add(mainDrag);
+        methodList.add(getDrag);
+        methodList.add(setDrag);
 
 
 
@@ -253,7 +267,7 @@ public class DnD {
             public void actionPerformed(ActionEvent e)
             {
                 JComponent c = (JComponent)e.getSource();
-                if(((JButton) c).getText().equals("Add")) {
+                if(((JButton) c).getIcon() != null) {
                     JTextArea nameArea = new JTextArea("labelName");
                     nameArea.setFont(new Font("Times New Roman", Font.BOLD,16));
                     Border border = BorderFactory.createLineBorder(Color.BLACK,1);
@@ -267,6 +281,7 @@ public class DnD {
                     askPanel.add(nameArea);
                     askPanel.add(contentArea);
                     newItem = askPanel;
+                    ((JButton) c).setIcon(null);
                     ((JButton) c).setText("Confirm");
                     dragArea.setLayout(new GridLayout(dragArea.getComponentCount()+1, 0, 0, 5));
                     dragArea.add(askPanel);
@@ -284,7 +299,8 @@ public class DnD {
                           dsList.add(newLabel);
                           sectionSelector.setSelectedIndex(2);
                           sectionSelector.setSelectedIndex(1);
-                            ((JButton) c).setText("Add");
+                            ((JButton) c).setText(null);
+                            ((JButton) c).setIcon(plusIcon);
                             break;
                         case "Data Types":
                             JPanel found2 =  (JPanel)  dragArea.getComponent(dtList.size()) ;
@@ -297,7 +313,8 @@ public class DnD {
                             dtList.add(newLabel2);
                             sectionSelector.setSelectedIndex(3);
                             sectionSelector.setSelectedIndex(2);
-                            ((JButton) c).setText("Add");
+                            ((JButton) c).setText(null);
+                            ((JButton) c).setIcon(plusIcon);
                             break;
                         case "Testing":
                             JPanel found3 =  (JPanel)  dragArea.getComponent(testingList.size()) ;
@@ -310,7 +327,8 @@ public class DnD {
                             testingList.add(newLabel3);
                             sectionSelector.setSelectedIndex(3);
                             sectionSelector.setSelectedIndex(4);
-                            ((JButton) c).setText("Add");
+                            ((JButton) c).setText(null);
+                            ((JButton) c).setIcon(plusIcon);
                             break;
                         case "Methods":
                             JPanel found4 =  (JPanel)  dragArea.getComponent(methodList.size()) ;
@@ -323,7 +341,8 @@ public class DnD {
                             methodList.add(newLabel4);
                             sectionSelector.setSelectedIndex(4);
                             sectionSelector.setSelectedIndex(3);
-                            ((JButton) c).setText("Add");
+                            ((JButton) c).setText(null);
+                            ((JButton) c).setIcon(plusIcon);
                             break;
                     }
 
@@ -361,6 +380,7 @@ public class DnD {
                 if(e.getStateChange() == ItemEvent.SELECTED) {
                     switch((String)sectionSelector.getSelectedItem()){
                         case "Data Structures":
+                            addBtn.setVisible(true);
                             dragArea.removeAll();
                             dragArea.setLayout(new GridLayout(dtList.size(), 0, 0, 5));
 
@@ -425,6 +445,7 @@ public class DnD {
                             dragArea.repaint();
                             break;
                         case "Data Types":
+                            addBtn.setVisible(true);
                             dragArea.removeAll();
                             dragArea.setLayout(new GridLayout(dtList.size(), 0, 0, 5));
 
@@ -492,6 +513,7 @@ public class DnD {
                             dragArea.repaint();
                             break;
                         case "Testing":
+                            addBtn.setVisible(true);
                             dragArea.removeAll();
                             dragArea.setLayout(new GridLayout(testingList.size(), 0, 0, 5));
 
@@ -551,11 +573,13 @@ public class DnD {
                                 holder.add(starbtn, BorderLayout.EAST);
                                 dragArea.add(holder);
 
+
                             }
                             dragArea.revalidate();
                             dragArea.repaint();
                             break;
                         case "Methods":
+                            addBtn.setVisible(true);
                             dragArea.removeAll();
                             dragArea.setLayout(new GridLayout(methodList.size(), 0, 0, 5));
 
@@ -620,6 +644,7 @@ public class DnD {
                             dragArea.repaint();
                             break;
                         case "Favourites":
+                            addBtn.setVisible(false);
                             dragArea.removeAll();
                             if(favs.size() == 0){
                                 dragArea.setLayout(new GridLayout(1, 0, 0, 5));

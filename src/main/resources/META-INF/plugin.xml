@@ -1,13 +1,19 @@
 <idea-plugin>
     <id>org.example.ThesisPlugin</id>
-    <name>EmerJ</name>
+    <name>Jrag and Jrop</name>
     <version>1.0</version>
-    <vendor email="kyledennison090@gmail.com" url="https://kyledennison090.wixsite.com/website">KyleCorp</vendor>
+    <change-notes>New features are favouring and adding new labels. </change-notes>
+    <vendor email="kyledennison090@gmail.com" url="https://kyledennison090.wixsite.com/website"></vendor>
 
     <description><![CDATA[
-    This product makes an IDE more visually professional while also adding new functionality.
-    "Drag" Icon comes from Timothy Miller at iconfinder.com
-    Star Icon comes from "Star icon" by Icons8 at icons8.com
+    This product adds a new Tool Window that allows users to avoid retyping popular code segments using Drag and Drop code chunks.
+    The Tool Window contains labels that when clicked reveals java code that can be dragged into the main text area.
+    There are multiple categories like Testing, Data Structures, and Favourites where you can star your most used chunks to the same
+    place! New labels and code chunks can also be added to customize functionality to your needs.
+
+    move.png comes from "Drag" Icon by Timothy Miller at https://www.iconfinder.com/search/?q=drag&from=homepage&price=free&maximum=16
+    emptyStar.png and filledStar.png comes from "Star icon" by Icons8 at https://icons8.com/icons/set/star
+    plus.png comes from "Plus Math Icon" by Icons8 at https://icons8.com/icons/set/plus-math
     ]]></description>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
@@ -15,7 +21,7 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow id="DnD" secondary="true" icon="/myToolWindow/move.png" anchor="right"
+        <toolWindow id="JnJ" secondary="true" icon="/myToolWindow/move.png" anchor="right"
                     factoryClass="MyToolWindowFactory"/>
 
     </extensions>

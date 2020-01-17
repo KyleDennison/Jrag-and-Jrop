@@ -4,13 +4,13 @@
       <map>
         <entry key="$USER_HOME$/IdeaProjects/TEST1">
           <value>
-            <RecentProjectMetaInfo opened="true" projectWorkspaceId="1VOTEaOS1M7DliRLprghDJq4kyO">
+            <RecentProjectMetaInfo projectWorkspaceId="1VOTEaOS1M7DliRLprghDJq4kyO">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
               <option name="build" value="IC-193.5233.102" />
-              <option name="buildTimestamp" value="1574898465120" />
-              <frame x="40" y="310" width="1400" height="814" />
+              <option name="buildTimestamp" value="1574898474986" />
+              <frame x="30" y="195" width="1400" height="814" />
               <option name="productionCode" value="IC" />
-              <option name="projectOpenTimestamp" value="1579116587164" />
+              <option name="projectOpenTimestamp" value="1579269176911" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
