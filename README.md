@@ -1,4 +1,4 @@
-# Modeling Worldwide Suicide Data
+# Jrag and Jrop
 
 ![demo1](Pictures/demoPicture.png)
 
